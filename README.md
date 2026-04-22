@@ -1,5 +1,9 @@
 # Ranked Retrieval Search Engine
 
+🌐 [中文版](./README_CN.md)
+
+## Overview
+
 This project implements a simple search engine in Python using an inverted index with positional information. It support document indexing and ranked retrieval based on term coverage, proximity between matched terms, and preservation of query term order. 
 
 ## Features
@@ -19,26 +23,26 @@ This project implements a simple search engine in Python using an inverted index
 
 ```
 .
-├── index.py
-├── search.py
-├── sample_docs/
-├── sample_queries.txt
-├── requirements.txt
+├── index.py    # Index construction
+├── search.py   # Search and ranking
+├── sample_docs/    # Example documents
+├── requirements.txt    # Dependencies
 └── README.md
 ```
 
 ## Setup
 
 Create a virtual environment (optional but recommended):
-
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
+
 Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+
 Download required NLTK resources:
 ```bash
 python -c "import nltk; nltk.download('punkt')"
@@ -49,12 +53,12 @@ python -c "import nltk; nltk.download('omw-1.4')"
 
 ## Usage
 
-1. Build index
+### 1. Build index
 ```bash
 python index.py sample_docs sample_index
 ```
 
-2. Run search
+### 2. Run search
 ```bash
 python search.py sample_index
 ```
